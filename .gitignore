@@ -21,7 +21,7 @@ out/
 ## [ Environment & Secrets ]
 # DO NOT push your MongoDB connection strings
 appsettings.Development.json
-appsettings.Local.json
+appsettings.json
 .env
 
 ## [ Operating System ]
