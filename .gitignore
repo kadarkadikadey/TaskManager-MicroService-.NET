@@ -1,0 +1,38 @@
+## [ Visual Studio & .NET ]
+# Build folders
+[Bb]in/
+[Oo]bj/
+out/
+
+# Visual Studio specific
+.vs/
+*.user
+*.userosscache
+*.sln.docstates
+
+# VS Code specific
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+## [ Environment & Secrets ]
+# DO NOT push your MongoDB connection strings
+appsettings.Development.json
+appsettings.Local.json
+.env
+
+## [ Operating System ]
+# Windows
+Thumbs.db
+desktop.ini
+
+# macOS
+.DS_Store
+
+## [ NuGet ]
+# Package restore artifacts
+project.lock.json
+project.assets.json

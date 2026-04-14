@@ -1,0 +1,47 @@
+# 1. Configuration Variables
+@HostAddress = http://localhost:5217
+# TIP: Replace this ID with one you get from the POST request below
+@taskId = YOUR_PRODUCT_ID
+
+### 1. Get All Tasks
+# Use this to verify your MongoDB connection is working
+GET {{HostAddress}}/api/tasks
+Accept: application/json
+
+###
+
+### 2. Create a New Task
+# This will insert a new document into your MongoDB Atlas collection
+POST {{HostAddress}}/api/tasks
+Content-Type: application/json
+
+{
+  "title": "Setup MongoDB Atlas",
+  "description": "Connect the TaskManager microservice to the cloud database cluster.",
+  "status": "In Progress"
+}
+
+###
+
+### 3. Get Task by ID
+GET {{HostAddress}}/api/tasks/{{taskId}}
+Accept: application/json
+
+###
+
+### 4. Update a Task (Put)
+# This replaces the entire task document
+PUT {{HostAddress}}/api/tasks/{{taskId}}
+Content-Type: application/json
+
+{
+  "id": "{{taskId}}",
+  "title": "Setup MongoDB Atlas - COMPLETED",
+  "description": "The connection is successful and tested.",
+  "status": "Completed"
+}
+
+###
+
+### 5. Delete a Task
+DELETE {{HostAddress}}/api/tasks/{{taskId}}
